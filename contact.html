@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+    <link rel="stylesheet" href="./assets/css/servicesSection.css" />
+  </head>
+  <body>
+    <!-- Hero / Page Title Section -->
+    <section
+      class="page-title-section"
+      style="
+        background: url('./assets/media/homePage/contact.jpg') center/cover
+          no-repeat;
+      "
+    >
+      <div class="overlay"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="fw-bold mb-3 animate-fade-in">Contact</h1>
+            <ul class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item active">Contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mb-5">
+      <h5 class="h6 pageTitle">Contact</h5>
+      <h2 class="display-20 display-md-18 display-lg-16 pageSubTitle">
+        Get in touch with us!
+      </h2>
+    </div>
+    <!-- Contact Section -->
+    <section class="contact-section container">
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-wrapper mb-5">
+            <h3>Drop us a message</h3>
+
+            <form action="quform/contact.php" method="post">
+              <div class="form-group">
+                <label for="name" class="sr-only">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="sr-only">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Your Email *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject" class="sr-only">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-control"
+                  placeholder="Subject *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="sr-only">Phone</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  placeholder="Phone"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message" class="sr-only">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Message *"
+                  required
+                ></textarea>
+              </div>
+              <button class="butn" type="submit">
+                Send Message <i class="fas fa-arrow-right arrowIconCss"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-4 contact-info">
+          <div class="contact-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h5>Location</h5>
+              <p>105 Edington Drive, Roswell, GA 30076</p>
+            </div>
+          </div>
+          <div class="contact-box">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h5>Call Us</h5>
+              <a href="tel:+1234567890">+1 234 567 890</a>
+              <a href="tel:+1234567890">+1 234 567 890</a>
+            </div>
+          </div>
+          <div class="contact-box">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h5>Email</h5>
+              <a href="mailto:email@youradress.com">email@youradress.com</a>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer placeholder -->
+    <div id="footer"></div>
+    <script src="./assets/js/Home/footer.js"></script>
+  </body>
+</html>

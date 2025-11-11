@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genie Services</title>
+    <!-- my favicon -->
+
+    <link rel="icon" href="./assets/Icons/myFavicon.svg" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Fonts -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/services.css" />
+    <link rel="stylesheet" href="./assets/css/whychooseus.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+  </head>
+  <body>
+    <!--Loading-->
+    <div
+      id="loader-wrapper"
+      class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
+      style="z-index: 9999"
+    >
+      <div
+        class="spinner-border text-info"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transparent">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <!-- SVG Logo -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="40"
+            height="40"
+          >
+            <path
+              fill="#00baee"
+              d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+            />
+          </svg>
+          <div class="navbar-brand-title transparent" id="navbarLogo">
+            <div class="main-title">GENIE..</div>
+            <div class="sub-title">SERVICES</div>
+          </div>
+        </a>
+
+        <!-- Offcanvas Toggle Button for small screens -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas menu -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="homePage">HOME</a>
+              </li>
+
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="servicesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  SERVICES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li>
+                    <a class="dropdown-item" onclick="loadPage('ac.html')"
+                      >AC</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="loadPage('tv.html')"
+                      >TV</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      onclick="loadPage('dishwasher.html')"
+                      >Dish Washer</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      onclick="loadPage('washingMachine.html')"
+                      >Washing Machine</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadPage('about.html')"
+                  >ABOUT</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadPage('contact.html')"
+                  >CONTACT</a
+                >
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadPage('news.html')"
+                  >NEWS</a
+                >
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="pageContent">
+      <!-- Hero Carousel -->
+      <div class="eachContainer hero-carousel owl-carousel owl-theme">
+        <div
+          class="item slide-1"
+          style="background-image: url('./assets/media/homePage/homePage2.png')"
+        >
+          <div class="hero-caption">
+            <p class="lead primaryColor">The best repair service ever!</p>
+            <h1 class="display-4 homeTitle">
+              Your One-Stop Solution for Quality Repairs
+            </h1>
+            <button class="butn" onclick="location.href='#servicesDiv'">
+              Learn more <i class="fas fa-arrow-right arrowIconCss"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="item slide-2"
+          style="background-image: url('./assets/media/homePage/homePage1.png')"
+        >
+          <div class="hero-caption">
+            <p class="lead primaryColor">The best repair service ever!</p>
+            <h1 class="display-4 homeTitle">
+              From AC Repairs to TV Fixes, We've Got You Covered
+            </h1>
+            <button class="butn" onclick="location.href='#servicesDiv'">
+              Learn more <i class="fas fa-arrow-right arrowIconCss"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="item slide-3"
+          style="background-image: url('./assets/media/homePage/homePage0.jpg')"
+        >
+          <div class="hero-caption">
+            <p class="lead primaryColor">The best repair service ever!</p>
+            <h1 class="display-4 homeTitle">
+              Certified Experts ,Trusted Repairs
+            </h1>
+            <button class="butn" onclick="location.href='#servicesDiv'">
+              Learn more <i class="fas fa-arrow-right arrowIconCss"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- About section -->
+      <div class="eachContainer container about-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="position-relative animate-left">
+              <div class="image-box">
+                <img
+                  src="./assets/media/Cards/dishwash3.jpg"
+                  class="img-fluid rounded"
+                  alt="About Us"
+                />
+              </div>
+              <span class="pattern-bg">
+                <img src="./assets/media/pattern/pattern.png" alt="Pattern" />
+              </span>
+              <div class="counter-box counter-style1">
+                <h4 class="countup">1</h4>
+                <h5 class="countuph5css">Years of Experience</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content animate-right">
+              <h5 class="section-subtitle aboutTitle">
+                <span class="typewriter" data-text="About Us"></span>
+              </h5>
+              <h2 class="section-title about-subTitle">
+                We have years of experience in home repair and appliance
+                servicing.
+              </h2>
+              <p class="about-subTitle-Description">
+                We offer services for all types and sizes of spaces — from small
+                homes to large offices, warehouses, and retail locations.
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-style stagger-list">
+                    <li>Experienced Team</li>
+                    <li>Quick Response Time</li>
+                    <li>100% Satisfaction</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-style stagger-list">
+                    <li>Latest Equipment</li>
+                    <li>Affordable Pricing</li>
+                    <li>24/7 Online Support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <button class="butn" onclick="location.href='#whyChoose'">
+                Discover more <i class="fas fa-arrow-right arrowIconCss"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="" id="servicesDiv">
+        <div class="services-container container mt-5">
+          <div class="services-container container mt-5">
+            <h6 class="section-subtitle servicesTitle fade-up-on-scroll">
+              <span class="typewriter" data-text="Our Services"></span>
+            </h6>
+            <h2 class="services-subTitle fade-up-on-scroll">
+              We offer many types of services
+            </h2>
+          </div>
+          <div class="Services-section py-5">
+            <div class="container">
+              <div class="row justify-content-center g-4 services-row">
+                <!-- Card 1 -->
+                <div
+                  class="col-lg-3 col-md-6 col-sm-6 col-12 d-flex justify-content-center"
+                >
+                  <div
+                    class="service-card-ac"
+                    style="background-image: url('./assets/media/AC/ac2.jpg')"
+                  >
+                    <div class="service-card-ac-content">
+                      <div class="icon cardIconcss">
+                        <i class="fa-solid fa-wind"></i>
+                      </div>
+                      <p class="service-card-title">AC Repair</p>
+                      <div>
+                        <p class="service-card-data">
+                          Fast, reliable servicing for cooling issues, gas
+                          refills, and general AC faults.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="col-lg-3 col-md-6 col-sm-6 col-12 d-flex justify-content-center"
+                >
+                  <div
+                    class="service-card-ac"
+                    style="
+                      background-image: url('./assets/media/Cards/tv2.jpg');
+                    "
+                  >
+                    <div class="service-card-ac-content">
+                      <div class="icon cardIconcss">
+                        <i class="fa-solid fa-bolt"></i>
+                      </div>
+                      <p class="service-card-title">TV Repair</p>
+                      <div>
+                        <p class="service-card-data">
+                          Expert repairs for display, audio, and power issues on
+                          all major brands.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="col-lg-3 col-md-6 col-sm-6 col-12 d-flex justify-content-center"
+                >
+                  <div
+                    class="service-card-ac"
+                    style="
+                      background-image: url('./assets/media/Cards/dish2.jpg');
+                    "
+                  >
+                    <div class="service-card-ac-content">
+                      <div class="icon cardIconcss">
+                        <i class="fa-solid fa-plate-wheat"></i>
+                      </div>
+                      <p class="service-card-title">Dishwasher Repair</p>
+                      <div>
+                        <p class="service-card-data">
+                          Quick fixes for leaks, drainage problems, and wash
+                          cycle failures.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                  class="col-lg-3 col-md-6 col-sm-6 col-12 d-flex justify-content-center"
+                >
+                  <div
+                    class="service-card-ac"
+                    style="
+                      background-image: url('./assets/media/Cards/washingmachine2.jpg');
+                    "
+                  >
+                    <div class="service-card-ac-content">
+                      <div class="icon cardIconcss">
+                        <i class="fa-solid fa-tint"></i>
+                      </div>
+                      <p class="service-card-title">Washing Machine</p>
+                      <div>
+                        <p class="service-card-data">
+                          Front-load or top-load — we fix spin, drain, and power
+                          issues efficiently.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Why choose us Section -->
+
+      <div
+        class="eachContainer container why-choose-section py-5"
+        id="whyChoose"
+      >
+        <div class="row align-items-center">
+          <!-- Text Content -->
+          <div
+            class="col-lg-5 mb-4 mb-lg-0"
+            id="textContent"
+            style="opacity: 0; transform: translateY(20px); transition: all 1s"
+          >
+            <div class="why-choose-text">
+              <h6 class="section-subtitle servicesTitle">
+                <span class="typewriter" data-text=" Why Choose Us"
+                  >Why Choose Us</span
+                >
+              </h6>
+              <h2 class="section-title">We Fix What Others Can’t.</h2>
+              <p class="section-description">
+                From ACs to appliances, our skilled team handles every job with
+                precision. We Take the Stress Out of Repairs
+              </p>
+
+              <div class="why-choose-item d-flex mb-4">
+                <i
+                  class="fas fa-chess-king icon-style iconStyleCssWCU me-3"
+                ></i>
+                <div>
+                  <h4 class="item-title">We are experts</h4>
+                  <p class="item-description">
+                    No more chasing technicians — we make home repair easy and
+                    hassle-free.
+                  </p>
+                </div>
+              </div>
+
+              <div class="why-choose-item d-flex mb-4">
+                <i class="fas fa-check icon-style iconStyleCssWCU me-3"></i>
+                <div>
+                  <h4 class="item-title">We are committed</h4>
+                  <p class="item-description">
+                    A reliable system and experienced professionals ensure
+                    consistent, high-quality service.
+                  </p>
+                </div>
+              </div>
+
+              <div class="why-choose-item d-flex">
+                <i class="fas fa-headset icon-style iconStyleCssWCU me-3"></i>
+                <div>
+                  <h4 class="item-title">24/7 Support</h4>
+                  <p class="item-description">
+                    Your comfort is our priority — every service is guided by
+                    your needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Gallery -->
+          <div class="col-lg-7 text-center">
+            <div class="row g-3 ps-lg-4" id="gallery">
+              <div class="col-6">
+                <div class="mb-3 hoverstyle1 gallery-item">
+                  <img
+                    src="./assets/media/homePage/homePage4.jpg"
+                    class="img-fluid rounded"
+                    alt="Gallery 1"
+                  />
+                </div>
+                <div class="hoverstyle1 gallery-item">
+                  <img
+                    src="./assets/media/homePage/homePage6.jpg"
+                    class="img-fluid rounded"
+                    alt="Gallery 2"
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3 hoverstyle1 gallery-item">
+                  <img
+                    src="./assets/media/homePage/homePage5.jpg"
+                    class="img-fluid rounded"
+                    alt="Gallery 3"
+                  />
+                </div>
+                <div class="hoverstyle1 gallery-item">
+                  <img
+                    src="./assets/media/homePage/homePage7.jpg"
+                    class="img-fluid rounded"
+                    alt="Gallery 4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Our Process -->
+      <div class="eachContainer container process-section">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="300">
+          <h5 class="section-subtitle aboutTitle">
+            <span class="typewriter" data-text="Our Process"></span>
+          </h5>
+          <h2 class="process-title ourProcessTitle">
+            Simple Steps to Reliable Repair
+          </h2>
+        </div>
+
+        <div class="row">
+          <!-- Step 1 -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="process-block">
+              <div class="process-step">
+                <div class="dot-border">01</div>
+              </div>
+              <h4 class="process-title">Explore Our Services</h4>
+              <p>
+                Explore our wide range of repair services. Find the service that
+                fits your needs.
+              </p>
+              <a href="#services" class="read-more">
+                Read more
+                <i
+                  class="fas fa-arrow-circle-right"
+                  style="
+                    color: #00baee;
+                    padding-left: 8px;
+                    vertical-align: middle;
+                  "
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="process-block">
+              <div class="process-step">
+                <div class="dot-border">02</div>
+              </div>
+              <h4 class="process-title">Call or Email Us</h4>
+              <p>
+                Found your service? Just reach out to us via call or email. No
+                registration, no fuss.
+              </p>
+              <a href="#services" class="read-more">
+                read more
+                <i
+                  class="fas fa-arrow-circle-right"
+                  style="
+                    color: #00baee;
+                    padding-left: 8px;
+                    vertical-align: middle;
+                  "
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="process-block">
+              <div class="process-step">
+                <div class="dot-border last">03</div>
+              </div>
+              <h4 class="process-title">Schedule & Repair</h4>
+              <p>
+                We’ll schedule a convenient time, visit your location, and fix
+                your appliance with care.
+              </p>
+              <a href="#services" class="read-more">
+                read more
+                <i
+                  class="fas fa-arrow-circle-right"
+                  style="
+                    color: #00baee;
+                    padding-left: 8px;
+                    vertical-align: middle;
+                  "
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Placeholder for footer -->
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <div id="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="./assets/js/Home/home.js"></script>
+    <script src="./assets/js/Home/footer.js"></script>
+  </body>
+</html>

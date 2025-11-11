@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/servicesSection.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section
+      class="page-title-section"
+      style="
+        background: url('./assets/media/homePage/about.jpg') center/cover
+          no-repeat;
+      "
+    >
+      <div class="overlay"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="fw-bold mb-3 animate-fade-in">About Us</h1>
+            <ul class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active">About</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section container my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 animate-slide-left mb-4 mb-lg-0">
+          <img
+            src="./assets/media/Cards/dish2.jpg"
+            alt="Our Team"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-lg-6 animate-slide-right">
+          <h2 class="pageTitle">Who We Are</h2>
+          <p>
+            We are a dedicated team of professionals offering home repair,
+            maintenance, and appliance services. With years of experience, our
+            focus is on delivering quality, reliability, and customer
+            satisfaction.
+          </p>
+          <ul class="about-list">
+            <li>Experienced & Skilled Team</li>
+            <li>Quick Response & Service</li>
+            <li>24/7 Customer Support</li>
+            <li>Affordable Pricing</li>
+          </ul>
+          <a href="services.html" class="butn">
+            Discover More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section py-5">
+      <div class="container">
+        <div class="counter-card bg-white shadow rounded p-4">
+          <div class="row text-center">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h2 class="countup" data-target="10">0</h2>
+              <p>Years of Experience</p>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h2 class="countup" data-target="500">0</h2>
+              <p>Projects Completed</p>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h2 class="countup" data-target="200">0</h2>
+              <p>Happy Clients</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h2 class="countup" data-target="50">0</h2>
+              <p>Expert Technicians</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Counter Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".countup");
+
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          let count = 0;
+          const speed = target / 200;
+
+          const updateCount = () => {
+            count += speed;
+            if (count < target) {
+              counter.innerText = Math.floor(count);
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target;
+            }
+          };
+
+          updateCount();
+        });
+      });
+    </script>
+
+    <!-- Footer Injection + Page JS -->
+    <script src="./assets/js/Home/footer.js"></script>
+  </body>
+</html>
