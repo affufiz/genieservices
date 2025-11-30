@@ -1,0 +1,237 @@
+:root {
+  --primary-color: #00baee;
+  --secondary-color: #004975;
+  --accent-color: #ffffff;
+}
+
+/* ===== Navbar Base ===== */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: var(--accent-color);
+  transition: color 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Nav Links (Desktop) ===== */
+.navbar .nav-link {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding: 10px 0;
+  color: var(--accent-color); /* white by default */
+  transition: color 0.2s ease;
+}
+
+.navbar.scrolled .nav-link {
+  color: var(--secondary-color); /* dark on scroll */
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--primary-color) !important;
+}
+
+/* ===== Align navbar items right on desktop ===== */
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: flex-end; /* push links to right */
+  }
+  .navbar .navbar-nav {
+    margin-left: auto; /* ensures right alignment */
+  }
+}
+
+/* ===== Dropdown ===== */
+.navbar .dropdown-menu {
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  animation: fadeInDown 0.3s ease both;
+  margin-top: 5px;
+}
+
+.dropdown-item {
+  color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.dropdown-item:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* ===== Logo ===== */
+#navbarLogo {
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+#navbarLogo .main-title {
+  font-weight: 900;
+  font-size: 23px;
+  position: relative;
+  bottom: 1px;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+}
+
+#navbarLogo .sub-title {
+  font-weight: 300;
+  font-size: 13px;
+  position: relative;
+  bottom: 6px;
+  left: 1px;
+  color: var(--accent-color);
+  letter-spacing: 4px;
+}
+
+#navbarLogo .main-title,
+#navbarLogo .sub-title {
+  transition: color 0.3s ease;
+}
+
+#navbarLogo.scrolled {
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+#navbarLogo.scrolled .main-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+#navbarLogo.scrolled .sub-title {
+  font-weight: 300;
+  font-size: 10px;
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+/* ===== Nav Item Spacing ===== */
+.navbar .navbar-nav .nav-item {
+  margin-right: 20px;
+}
+.navbar .navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+/* ===== Offcanvas (Mobile) ===== */
+@media (max-width: 991.98px) {
+  .offcanvas-body .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .offcanvas-body .nav-link:hover,
+  .offcanvas-body .nav-link:focus {
+    color: var(--primary-color) !important;
+  }
+
+  .offcanvas-body .dropdown-menu .dropdown-item {
+    color: var(--secondary-color) !important;
+  }
+
+  .offcanvas-body .dropdown-menu .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #fff !important;
+  }
+}
+
+/* ===== Navbar Toggler ===== */
+/* ===== Navbar Toggler ===== */
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--accent-color); 
+  display: inline-block; 
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbar-toggler-icon::before,
+.navbar .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar .navbar-toggler-icon::after {
+  top: 7px;
+}
+
+/* Change toggler color when navbar is white */
+.navbar.scrolled .navbar-toggler-icon,
+.navbar.scrolled .navbar-toggler-icon::before,
+.navbar.scrolled .navbar-toggler-icon::after {
+  background-color: var(--secondary-color) !important;
+}
+
+
+/* ===== Keyframes ===== */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Force navbar items right-aligned on desktop */
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end !important; /* push links to right */
+  }
+
+  .navbar .navbar-nav {
+    margin-left: auto !important; /* ensures right alignment */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important; /* removes Bootstrap focus glow */
+}
+/* Move toggler on mobile */
+@media (max-width: 428.98px) {
+  .navbar .navbar-toggler {
+    position: relative;
+    right: 29%;      /* adjust vertically if needed */
+    z-index: 999999; /* keep on top */
+  }
+}
